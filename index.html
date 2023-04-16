@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style-type: none;
+            font-family: sans-serif;
+        }
+
+        a,
+        a:visited {
+            color: inherit;
+        }
+
+        .form {
+            width: 300px;
+            margin: 100px auto;
+            border-radius: 5px;
+            background: #e0e0e0;
+            box-shadow: 20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+            padding: 3rem 0 0;
+            position: relative;
+            border-top: 4px solid royalblue;
+        }
+
+        .login {
+            overflow: hidden;
+            transition: 1s;
+            padding: 2rem;
+            height: 245px;
+        }
+
+        input,
+        button {
+            display: block;
+            width: 100%;
+            outline: none;
+            border: 1px solid #ddd;
+            background: none;
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 10px;
+            background: #e0e0e0;
+            box-shadow: 12px 12px 24px #bebebe,
+                -12px -12px 24px #ffffff;
+        }
+
+        button {
+            cursor: pointer;
+            color: #fff;
+            background: royalblue;
+            border: none;
+        }
+
+        .signin {
+            overflow: hidden;
+            transition: 1s;
+            height: 351px;
+            padding: 2rem;
+        }
+
+        .btn {
+            position: absolute;
+            padding: 10px;
+            color: #fff;
+            background: #4169e1;
+            top: 0;
+            right: 0;
+            margin: 0;
+            display: inline-block;
+            width: auto;
+            border-radius: 5px;
+        }
+
+        .h {
+            height: 0;
+            opacity: 0;
+            padding: 0 2rem;
+        }
+
+        .forget {
+            background: rgb(240, 238, 238);
+            padding: 10px;
+            text-align: center;
+            border-radius: 0 0 5px 5px;
+        }
+
+        a {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <div class="login">
+            <form>
+                <h3>Login to your account</h3>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button>Login</button>
+            </form>
+        </div>
+        <div class="signin h">
+            <form>
+                <h3>Creat an account</h3>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <input type="email" placeholder="Emain Address">
+                <input type="text" placeholder="Phone Number">
+                <button>Register</button>
+            </form>
+        </div>
+        <div class="forget">
+            <a href="#">Forget your password?</a>
+        </div>
+        <button class="btn" onclick="creataccount()">you dont have an account?</button>
+    </div>
+
+    <script>
+        function creataccount() {
+            document.querySelector('.login').classList.toggle('h');
+            document.querySelector('.signin').classList.toggle('h');
+        }
+    </script>
+</body>
+
+</html>
